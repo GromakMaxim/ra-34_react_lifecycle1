@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ra-34_react_lifecycle1/static/css/main.b96ea342.css",
+    "main.js": "/ra-34_react_lifecycle1/static/js/main.1355641b.js",
+    "static/js/787.d7cc3411.chunk.js": "/ra-34_react_lifecycle1/static/js/787.d7cc3411.chunk.js",
+    "index.html": "/ra-34_react_lifecycle1/index.html",
+    "main.b96ea342.css.map": "/ra-34_react_lifecycle1/static/css/main.b96ea342.css.map",
+    "main.1355641b.js.map": "/ra-34_react_lifecycle1/static/js/main.1355641b.js.map",
+    "787.d7cc3411.chunk.js.map": "/ra-34_react_lifecycle1/static/js/787.d7cc3411.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b96ea342.css",
+    "static/js/main.1355641b.js"
+  ]
+}
