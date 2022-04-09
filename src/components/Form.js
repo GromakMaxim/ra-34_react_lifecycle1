@@ -11,7 +11,8 @@ export default function Form(props) {
         if (props.data.length === 0) return null;
         let result = [];
         props.data.forEach(elem => {
-            result.push(<Timer key={elem.id} title={elem.title} time={elem.time}/>);
+            result.push(<Timer key={elem.id} id={elem.id} title={elem.title} time={elem.time}
+                               funcDel={props.funcDel}/>);
         })
         return result;
     }

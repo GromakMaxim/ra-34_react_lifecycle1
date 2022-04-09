@@ -13,6 +13,14 @@ export default class Widget extends Component {
         }
 
         this.addTimer = this.addTimer.bind(this);
+        this.deleteTimer = this.deleteTimer.bind(this);
+    }
+
+    deleteTimer(e) {
+        let arr = this.state.timers.filter(elem => elem.id !== parseInt(e.target.id));
+        this.setState({
+            timers: arr
+        })
     }
 
     addTimer(timezoneName, time) {
@@ -38,6 +46,6 @@ export default class Widget extends Component {
 
 
     render() {
-        return <Form funcAdd={this.addTimer} data={this.state.timers}/>;
+        return <Form funcDel={this.deleteTimer} funcAdd={this.addTimer} data={this.state.timers}/>;
     }
 }

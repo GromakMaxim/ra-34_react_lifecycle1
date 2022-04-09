@@ -32,6 +32,7 @@ export default class Timer extends React.Component {
             <div className='timer flex-row'>
                 <div className='currentTime'>{this.state.date.toLocaleString()}</div>
                 <div className='title'>{this.props.title}</div>
+                <div id={this.props.id} className='delete' onClick={this.props.funcDel}>X</div>
             </div>
 
         );

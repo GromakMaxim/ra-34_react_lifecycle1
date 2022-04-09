@@ -21,3 +21,8 @@ form > div:nth-child(2) {
 .currentTime {
     margin-right: 20px;
 }
+
+.delete {
+    cursor: pointer;
+    margin-left: 20px;
+}
