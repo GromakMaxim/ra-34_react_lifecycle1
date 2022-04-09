@@ -1,5 +1,5 @@
 import React from "react";
-import Timer from "./Timer";
+import Clock from "./Clock";
 
 export default function Form(props) {
     function submitHandler(e) {
@@ -11,7 +11,7 @@ export default function Form(props) {
         if (props.data.length === 0) return null;
         let result = [];
         props.data.forEach(elem=>{
-            result.push(<Timer key={elem.id} timezone={elem.timezone} time={elem.time}/>);
+            result.push(<Clock key={elem.id} timezone={elem.timezone}/>);
         })
         return result;
     }
