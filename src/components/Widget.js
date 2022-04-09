@@ -9,18 +9,30 @@ export default class Widget extends Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
-            timers: new Map()
+            timers: []
         }
 
         this.addTimer = this.addTimer.bind(this);
     }
 
     addTimer(timezoneName, time) {
-        console.log(timezoneName + " " + time)
-        let newMap = this.state.timers.set(timezoneName, time)
+        let maxIndex;
+        if (this.state.timers.length === 0) {
+            maxIndex = 0;
+        } else {
+            maxIndex = this.state.timers.reduce((prev, current, index) => prev.id > current.id ? prev : index, {})+1;
+        }
+        let obj = {
+            timezone: timezoneName,
+            time: time,
+            id: maxIndex
+        }
+
+       let arr = this.state.timers;
+        arr.push(obj);
 
         this.setState({
-            timers: newMap
+            timers: arr
         });
     }
 

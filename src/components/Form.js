@@ -8,12 +8,11 @@ export default function Form(props) {
     }
 
     function renderTimers() {
+        if (props.data.length === 0) return null;
         let result = [];
-        console.log(props.data)
-        for (let entry of props.data) {
-            result.push(<Timer key={entry.key} title={entry.key} time={entry.value}/>);
-        }
-        console.log(result)
+        props.data.forEach(elem=>{
+            result.push(<Timer key={elem.id} timezone={elem.timezone} time={elem.time}/>);
+        })
         return result;
     }
 
