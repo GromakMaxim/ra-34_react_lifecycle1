@@ -23,7 +23,6 @@ export default class Timer extends React.Component {
     tick() {
         let d = new Date();
         let currentTimeZoneOffsetInHours = d.getTimezoneOffset() / 60;
-        console.log(currentTimeZoneOffsetInHours)
         d.setHours(d.getHours() + currentTimeZoneOffsetInHours + this.props.time + 1)
         this.setState({
             date: d
