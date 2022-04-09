@@ -31,7 +31,7 @@ export default function Form(props) {
                 <div className='flex-col'>
                     <span>Временная зона:</span>
                     <label>
-                        <input type='text' name='timezone'/>
+                        <input type='text' name='timezone' placeholder='type +1 / +2 / +3.. or -1 / -2 / -3'/>
                     </label>
                 </div>
 
