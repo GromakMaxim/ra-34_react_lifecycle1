@@ -3,7 +3,9 @@ import * as React from "react";
 export default class Clock extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {date: new Date()};
+        let d = new Date();
+        d.setHours(d.getHours()+ props.time)
+        this.state = {date: d};
     }
 
     componentDidMount() {
@@ -18,8 +20,10 @@ export default class Clock extends React.Component {
     }
 
     tick() {
+        let d = new Date();
+        d.setHours(d.getHours()+ this.props.time)
         this.setState({
-            date: new Date()
+            date: d
         });
     }
 
@@ -27,7 +31,7 @@ export default class Clock extends React.Component {
         return (
             <div className='timer flex-row'>
                 <div className='currentTime'>{this.state.date.toLocaleString()}</div>
-                <div className='title'>{this.props.timezone}</div>
+                <div className='title'>{this.props.title}</div>
             </div>
 
         );

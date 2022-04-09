@@ -23,8 +23,8 @@ export default class Widget extends Component {
             maxIndex = this.state.timers.reduce((prev, current, index) => prev.id > current.id ? prev : index, {})+1;
         }
         let obj = {
-            timezone: timezoneName,
-            time: new Date(),
+            title: timezoneName,
+            time: parseInt(time),
             id: maxIndex
         }
 

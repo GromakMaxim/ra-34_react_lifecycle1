@@ -11,7 +11,7 @@ export default function Form(props) {
         if (props.data.length === 0) return null;
         let result = [];
         props.data.forEach(elem=>{
-            result.push(<Clock key={elem.id} timezone={elem.timezone}/>);
+            result.push(<Clock key={elem.id} title={elem.title} time={elem.time}/>);
         })
         return result;
     }
