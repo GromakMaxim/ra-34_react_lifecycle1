@@ -24,7 +24,7 @@ export default class Widget extends Component {
         }
         let obj = {
             timezone: timezoneName,
-            time: time,
+            time: new Date(),
             id: maxIndex
         }
 
