@@ -20,7 +20,7 @@ export default class Widget extends Component {
         if (this.state.timers.length === 0) {
             maxIndex = 0;
         } else {
-            maxIndex = this.state.timers.reduce((prev, current, index) => prev.id > current.id ? prev : index, {})+1;
+            maxIndex = this.state.timers.reduce((prev, current, index) => prev.id > current.id ? prev : index, {}) + 1;
         }
         let obj = {
             title: timezoneName,
@@ -28,7 +28,7 @@ export default class Widget extends Component {
             id: maxIndex
         }
 
-       let arr = this.state.timers;
+        let arr = this.state.timers;
         arr.push(obj);
 
         this.setState({

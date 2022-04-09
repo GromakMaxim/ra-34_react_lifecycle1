@@ -1,5 +1,5 @@
 import React from "react";
-import Clock from "./Clock";
+import Timer from "./Timer";
 
 export default function Form(props) {
     function submitHandler(e) {
@@ -10,8 +10,8 @@ export default function Form(props) {
     function renderTimers() {
         if (props.data.length === 0) return null;
         let result = [];
-        props.data.forEach(elem=>{
-            result.push(<Clock key={elem.id} title={elem.title} time={elem.time}/>);
+        props.data.forEach(elem => {
+            result.push(<Timer key={elem.id} title={elem.title} time={elem.time}/>);
         })
         return result;
     }

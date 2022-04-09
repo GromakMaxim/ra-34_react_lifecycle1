@@ -1,4 +1,4 @@
-.main{
+.main {
     margin: auto;
     max-width: 600px;
 }
@@ -13,11 +13,11 @@ form > div:nth-child(2) {
     margin-right: 20px;
 }
 
-.timers{
+.timers {
     padding: 20px;
 }
 
 
-.currentTime{
+.currentTime {
     margin-right: 20px;
 }
