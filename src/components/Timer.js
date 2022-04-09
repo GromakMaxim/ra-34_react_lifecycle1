@@ -4,7 +4,8 @@ export default class Timer extends React.Component {
     constructor(props) {
         super(props);
         let d = new Date();
-        d.setHours(d.getHours() + props.time)
+        let currentTimeZoneOffsetInHours = d.getTimezoneOffset() / 60;
+        d.setHours(d.getHours() + currentTimeZoneOffsetInHours + props.time + 1)
         this.state = {date: d};
     }
 
@@ -21,7 +22,9 @@ export default class Timer extends React.Component {
 
     tick() {
         let d = new Date();
-        d.setHours(d.getHours() + this.props.time)
+        let currentTimeZoneOffsetInHours = d.getTimezoneOffset() / 60;
+        console.log(currentTimeZoneOffsetInHours)
+        d.setHours(d.getHours() + currentTimeZoneOffsetInHours + this.props.time + 1)
         this.setState({
             date: d
         });
